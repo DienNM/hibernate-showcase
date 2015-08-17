@@ -18,7 +18,11 @@
         <!-- Connection Pool: c3p0 -->
         <property name="c3p0.timeout">10</property>
         
+		<!-- <mapping resource="mapping/hibernate.hbm.xml" /> -->
 		
-		<mapping resource="mapping/hibernate.hbm.xml" />
+		<mapping class="com.dee.hibernate.model.UserModel"/>
+        <mapping class="com.dee.hibernate.model.CategoryModel"/>
+        <mapping class="com.dee.hibernate.model.TagModel"/>
+        <mapping class="com.dee.hibernate.model.PostModel"/>
 	</session-factory>
 </hibernate-configuration>

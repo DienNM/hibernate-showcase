@@ -3,7 +3,11 @@ package com.dee.hibernate.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
 
 import com.dee.hibernate.enumeration.Gender;
 
@@ -16,24 +20,35 @@ public class UserModel implements Serializable{
 
     private static final long serialVersionUID = 1L;
     
+    @Id
     private String username;
-    
+
+    @Column
     private String email;
-    
+
+    @Column
     private String firstName;
-    
+
+    @Column
     private String lastName;
-    
+
+    @Column
     private Date dateOfBirth;
-    
+
+    @Column
     private boolean encryptedPassword = false;
-    
+
+    @Column
     private String password;
-    
+
+    @Column
+    @Enumerated(EnumType.STRING)
     private Gender gender;
-    
+
+    @Column
     private String website;
-    
+
+    @Column
     private String avatar;
     
     public UserModel() {

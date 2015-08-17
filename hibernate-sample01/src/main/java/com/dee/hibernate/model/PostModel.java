@@ -1,26 +1,45 @@
 package com.dee.hibernate.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import com.dee.hibernate.enumeration.BaseStatus;
 
 /**
  * @author dien.nguyen
  **/
-
-public class PostModel {
+@Entity
+public class PostModel implements Serializable{
     
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
+    @Column
     private String key;
-    
+
+    @Column
     private String title;
-    
+
+    @Column
     private String description;
-    
+
+    @Column
     private String content;
-    
+
+    @Column
+    @Enumerated(EnumType.STRING)
     private BaseStatus status = BaseStatus.Online;
     
     private UserModel owner;
@@ -28,13 +47,17 @@ public class PostModel {
     private Set<TagModel> tags;
     
     private CategoryModel category;
-    
+
+    @Column
     private Date createdAt;
-    
+
+    @Column
     private Date updatedAt;
-    
+
+    @Column
     private String createdBy;
-    
+
+    @Column
     private String updatedBy;
 
     public Long getId() {
