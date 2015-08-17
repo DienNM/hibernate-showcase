@@ -7,31 +7,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author dien.nguyen
  **/
 
 @Entity
+@Table(name = "category")
 public class CategoryModel implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
     
-    @Column
+    @Column(name = "key")
     private String key;
     
-    @Column
+    @Column(name = "name")
     private String name;
     
-    @Column
+    @Column(name = "description")
     private String description;
     
-    private CategoryModel parent;
-
+    @Column
+    private Long parentId;
+    
     public Long getId() {
         return id;
     }
@@ -64,12 +68,12 @@ public class CategoryModel implements Serializable {
         this.description = description;
     }
 
-    public CategoryModel getParent() {
-        return parent;
+    public Long getParentId() {
+        return parentId;
     }
 
-    public void setParent(CategoryModel parent) {
-        this.parent = parent;
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
     }
     
     

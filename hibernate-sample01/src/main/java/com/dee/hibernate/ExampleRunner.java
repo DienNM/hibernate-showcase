@@ -53,25 +53,25 @@ public class ExampleRunner {
         root.setDescription("Root Category");
         root.setKey("root");
         root.setName("Root");
-        root.setParent(null);
+        root.setParentId(-1l);
         
-        categoryDao.save(root);
+        root = categoryDao.save(root);
         
         CategoryModel category1 = new CategoryModel();
         category1.setDescription("Category 1");
         category1.setKey("category-1");
         category1.setName("Category 1");
-        category1.setParent(root);
+        category1.setParentId(root.getId());
         
-        categoryDao.save(category1);
+        category1 = categoryDao.save(category1);
         
         CategoryModel category2 = new CategoryModel();
         category2.setDescription("Category 2");
         category2.setKey("category-2");
         category2.setName("Category 2");
-        category2.setParent(root);
+        category2.setParentId(root.getId());
         
-        categoryDao.save(category2);
+        category2 = categoryDao.save(category2);
     }
 
     public UserDao getUserDao() {

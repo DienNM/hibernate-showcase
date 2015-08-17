@@ -11,6 +11,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import com.dee.hibernate.enumeration.BaseStatus;
 
@@ -18,6 +22,7 @@ import com.dee.hibernate.enumeration.BaseStatus;
  * @author dien.nguyen
  **/
 @Entity
+@Table(name = "post")
 public class PostModel implements Serializable{
     
     private static final long serialVersionUID = 1L;
@@ -42,10 +47,13 @@ public class PostModel implements Serializable{
     @Enumerated(EnumType.STRING)
     private BaseStatus status = BaseStatus.Online;
     
+    @ManyToOne
     private UserModel owner;
     
+    @ManyToMany
     private Set<TagModel> tags;
     
+    @OneToOne(mappedBy = "id")
     private CategoryModel category;
 
     @Column

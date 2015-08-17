@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.dee.hibernate.enumeration.Gender;
 
@@ -16,6 +17,7 @@ import com.dee.hibernate.enumeration.Gender;
  **/
 
 @Entity
+@Table(name = "user")
 public class UserModel implements Serializable{
 
     private static final long serialVersionUID = 1L;
