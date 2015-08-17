@@ -29,7 +29,6 @@ public class Runner2 {
             
             UserModel userModel = new UserModel();
             
-            userModel.setId(System.currentTimeMillis());
             userModel.setEmail("nmdien61@gmail.com");
             userModel.setFirstName("Dien");
             userModel.setLastName("Nguyen");

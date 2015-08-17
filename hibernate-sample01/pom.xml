@@ -14,7 +14,7 @@
 			<id>DienNM</id>
 			<name>Dien Nguyen (DEE)</name>
 			<email>nmdien61@gmail.com</email>
-			<timezone>8.0.0+</timezone>
+			<timezone>7.0.0+</timezone>
 			<properties>
 				<active>true</active>
 			</properties>
@@ -23,6 +23,7 @@
 
 	<properties>
 		<hibernate.version>4.3.11.Final</hibernate.version>
+		<hibernate-c3p0.version>4.3.11.Final</hibernate-c3p0.version>
 		<db.h2.version>1.4.187</db.h2.version>
 		<db.mysql.version>5.1.36</db.mysql.version>
 		<junit.version>4.12</junit.version>
@@ -40,6 +41,19 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate-c3p0.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.1</version>
+		</dependency>
+
+
 
 		<!-- Database -->
 		<dependency>

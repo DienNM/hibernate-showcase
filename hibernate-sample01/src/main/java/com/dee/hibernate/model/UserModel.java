@@ -1,16 +1,22 @@
 package com.dee.hibernate.model;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Entity;
+
+import com.dee.hibernate.enumeration.Gender;
 
 /**
  * @author dien.nguyen
  **/
 
+@Entity
 public class UserModel implements Serializable{
 
     private static final long serialVersionUID = 1L;
     
-    private Long id;
+    private String username;
     
     private String email;
     
@@ -18,17 +24,27 @@ public class UserModel implements Serializable{
     
     private String lastName;
     
-    private String dateOfBirth;
+    private Date dateOfBirth;
+    
+    private boolean encryptedPassword = false;
+    
+    private String password;
+    
+    private Gender gender;
+    
+    private String website;
+    
+    private String avatar;
     
     public UserModel() {
     }
-
-    public Long getId() {
-        return id;
+    
+    public String getUsername() {
+        return username;
     }
-
-    public void setId(Long id) {
-        this.id = id;
+    
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -55,12 +71,52 @@ public class UserModel implements Serializable{
         this.lastName = lastName;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public boolean isEncryptedPassword() {
+        return encryptedPassword;
+    }
+
+    public void setEncryptedPassword(boolean encryptedPassword) {
+        this.encryptedPassword = encryptedPassword;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
     
 }
