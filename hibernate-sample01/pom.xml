@@ -24,7 +24,7 @@
 	<properties>
 		<hibernate.version>4.3.11.Final</hibernate.version>
 		<db.h2.version>1.4.187</db.h2.version>
-        <db.mysql.version>5.1.36</db.mysql.version>
+		<db.mysql.version>5.1.36</db.mysql.version>
 		<junit.version>4.12</junit.version>
 	</properties>
 
@@ -32,6 +32,12 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 

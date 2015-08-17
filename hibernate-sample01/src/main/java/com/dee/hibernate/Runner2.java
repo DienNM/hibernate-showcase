@@ -13,7 +13,7 @@ import com.dee.hibernate.model.UserModel;
  **/
 
 public class Runner2 {
-
+    
     public static void main(String[] args) {
         Configuration configuration = new Configuration().configure("/config/mysql-hibernate.cfg.xml");
 
@@ -21,6 +21,7 @@ public class Runner2 {
                 configuration.getProperties()).build();
         
         SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        
         
         Session session = sessionFactory.openSession();
         try {
