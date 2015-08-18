@@ -35,6 +35,9 @@ public class One2OneCase02Test extends TestCase {
         Long userId = (Long) session.save(user);
         Long userInfoId = (Long) session.save(userInfo);
         session.getTransaction().commit();
+        session.close();
+        
+        session = SessionUtil.getSession();
         
         UserModel pUser = (UserModel) session.get(UserModel.class, userId);
         UserInfoModel pUserInfo = (UserInfoModel) session.get(UserInfoModel.class, userInfoId);

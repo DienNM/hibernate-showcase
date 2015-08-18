@@ -13,6 +13,8 @@ import junit.framework.TestCase;
  * @author dien.nguyen
  **/
 
+// Example of make the owner of relationship
+
 public class One2OneCase03Test extends TestCase {
     
     public void testOne2OneCase03_1() {
@@ -20,7 +22,6 @@ public class One2OneCase03Test extends TestCase {
         user.setEmail("nmdien61@gmail.com");
         user.setFirstName("Dien");
         user.setLastName("Nguyen");
-        
 
         UserInfoModel userInfo = new UserInfoModel();
         userInfo.setGender((short) 1);
@@ -32,14 +33,16 @@ public class One2OneCase03Test extends TestCase {
         
         Session session = SessionUtil.getSession();
         session.getTransaction().begin();
-        Long userId = (Long) session.save(user);
         Long userInfoId = (Long) session.save(userInfo);
+        Long userId = (Long) session.save(user);
+        
         session.getTransaction().commit();
         session.close();
         
         session = SessionUtil.getSession();
         UserModel pUser = (UserModel) session.get(UserModel.class, userId);
         UserInfoModel pUserInfo = (UserInfoModel) session.get(UserInfoModel.class, userInfoId);
+        session.close();
         
         Assert.assertNotNull(pUser);
         Assert.assertNotNull(pUserInfo);

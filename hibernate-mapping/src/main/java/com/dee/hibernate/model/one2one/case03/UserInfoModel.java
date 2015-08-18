@@ -1,7 +1,9 @@
 package com.dee.hibernate.model.one2one.case03;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +32,7 @@ public class UserInfoModel {
     @Column(name = "homephone")
     private String homephone;
     
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.LAZY)
     private UserModel user;
 
     public Long getId() {
