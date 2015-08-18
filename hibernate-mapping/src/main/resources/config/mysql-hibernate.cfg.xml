@@ -21,11 +21,11 @@
 		<!-- <mapping resource="mapping/hibernate.hbm.xml" /> -->
 		
 		<!-- One2One -->
-		<!-- <mapping class="com.dee.hibernate.model.one2one.case01.UserModel"/>
-        <mapping class="com.dee.hibernate.model.one2one.case01.UserInfoModel"/> -->
+		<mapping class="com.dee.hibernate.model.one2one.case01.UserModel"/>
+        <mapping class="com.dee.hibernate.model.one2one.case01.UserInfoModel"/>
         
-        <!-- <mapping class="com.dee.hibernate.model.one2one.case02.UserModel"/>
-        <mapping class="com.dee.hibernate.model.one2one.case02.UserInfoModel"/> -->
+        <mapping class="com.dee.hibernate.model.one2one.case02.UserModel"/>
+        <mapping class="com.dee.hibernate.model.one2one.case02.UserInfoModel"/>
         
         
         <mapping class="com.dee.hibernate.model.one2one.case03.UserModel"/>

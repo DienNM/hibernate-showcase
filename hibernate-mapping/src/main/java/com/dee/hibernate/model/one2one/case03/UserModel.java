@@ -10,14 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity
-@Table(name = "user_case03")
+@Entity(name = "user_case03")
 public class UserModel implements Serializable{
     
     private static final long serialVersionUID = 1L;
@@ -38,7 +36,7 @@ public class UserModel implements Serializable{
     @Column(name = "dob")
     private Date dob;
     
-    @OneToOne
+    @OneToOne(mappedBy = "user")
     @JoinColumn(name = "user_info")
     private UserInfoModel userInfo;
     

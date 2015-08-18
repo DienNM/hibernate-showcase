@@ -10,14 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity
-@Table(name = "user_case01")
+@Entity(name = "user_case01")
 public class UserModel implements Serializable{
     
     private static final long serialVersionUID = 1L;

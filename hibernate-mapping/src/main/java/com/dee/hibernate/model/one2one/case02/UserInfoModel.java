@@ -7,14 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity
-@Table(name = "user_info_case02")
+@Entity(name = "user_info_case02")
 public class UserInfoModel {
 
     @Id
@@ -34,7 +32,7 @@ public class UserInfoModel {
     private String homephone;
     
     @OneToOne
-    @JoinColumn(name = "user")
+    @JoinColumn(name = "user", nullable = true)
     private UserModel user;
 
     public Long getId() {

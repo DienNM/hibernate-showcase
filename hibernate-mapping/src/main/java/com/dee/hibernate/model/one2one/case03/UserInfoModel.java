@@ -5,16 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity
-@Table(name = "user_info_case03")
+@Entity(name = "user_info_case03")
 public class UserInfoModel {
 
     @Id
@@ -34,7 +31,6 @@ public class UserInfoModel {
     private String homephone;
     
     @OneToOne
-    @JoinColumn(name = "user")
     private UserModel user;
 
     public Long getId() {
