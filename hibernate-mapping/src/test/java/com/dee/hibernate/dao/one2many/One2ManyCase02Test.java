@@ -1,8 +1,5 @@
 package com.dee.hibernate.dao.one2many;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import junit.framework.TestCase;
 
 import org.hibernate.Session;
