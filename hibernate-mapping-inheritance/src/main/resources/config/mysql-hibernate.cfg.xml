@@ -39,5 +39,7 @@
         <mapping class="com.dee.hibernate.mapping.tablepersubclass.CustomerModel"/>
         <mapping class="com.dee.hibernate.mapping.tablepersubclass.EmployeeModel"/>
         
+        <mapping class="com.dee.hibernate.mapping.Category"/> 
+        
 	</session-factory>
 </hibernate-configuration>
