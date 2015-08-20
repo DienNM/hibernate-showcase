@@ -1,14 +1,12 @@
-package com.dee.hibernate.mapping.tblperhierarchy;
+package com.dee.hibernate.mapping.tablepersubclass;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity(name = "customer_02")
-@DiscriminatorValue("cus")
+@Entity(name = "customer_03")
 public class CustomerModel extends UserModel{
     
     private String type;

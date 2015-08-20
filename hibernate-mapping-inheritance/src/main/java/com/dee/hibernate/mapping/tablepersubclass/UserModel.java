@@ -1,8 +1,5 @@
-package com.dee.hibernate.mapping.tblperhierarchy;
+package com.dee.hibernate.mapping.tablepersubclass;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,17 +11,14 @@ import javax.persistence.InheritanceType;
  * @author dien.nguyen
  **/
 
-@Entity(name = "user_detail")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "user_type")
+@Entity(name = "user_parent")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class UserModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     
-    @Column(name = "user_type", insertable = false, updatable = false)
-    private String userType;
     
     private String email;
 
@@ -44,11 +38,4 @@ public class UserModel {
         this.email = email;
     }
     
-    public String getUserType() {
-        return userType;
-    }
-    
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
 }

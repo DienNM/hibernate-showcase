@@ -1,14 +1,12 @@
-package com.dee.hibernate.mapping.tblperhierarchy;
+package com.dee.hibernate.mapping.tablepersubclass;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
  * @author dien.nguyen
  **/
 
-@Entity(name = "employee_02")
-@DiscriminatorValue("emp")
+@Entity(name = "employee_03")
 public class EmployeeModel extends UserModel{
 
     private String department;

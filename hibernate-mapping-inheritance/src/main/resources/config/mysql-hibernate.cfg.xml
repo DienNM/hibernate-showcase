@@ -26,10 +26,18 @@
         
 		<!-- <mapping resource="mapping/hibernate.hbm.xml" /> -->
 		
-		<!-- One2One -->
 		<mapping class="com.dee.hibernate.mapping.tblperconccreteclass.UserModel"/>
 		<mapping class="com.dee.hibernate.mapping.tblperconccreteclass.CustomerModel"/>
         <mapping class="com.dee.hibernate.mapping.tblperconccreteclass.EmployeeModel"/>
+        
+        <mapping class="com.dee.hibernate.mapping.tblperhierarchy.UserModel"/>
+        <mapping class="com.dee.hibernate.mapping.tblperhierarchy.CustomerModel"/>
+        <mapping class="com.dee.hibernate.mapping.tblperhierarchy.EmployeeModel"/>
+        
+        
+        <mapping class="com.dee.hibernate.mapping.tablepersubclass.UserModel"/>
+        <mapping class="com.dee.hibernate.mapping.tablepersubclass.CustomerModel"/>
+        <mapping class="com.dee.hibernate.mapping.tablepersubclass.EmployeeModel"/>
         
 	</session-factory>
 </hibernate-configuration>
