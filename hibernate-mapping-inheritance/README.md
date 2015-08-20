@@ -31,3 +31,8 @@ A Simple Project For Using hibernate mapping inheritance
 	Package:
 		* com.dee.hibernate.mapping.tablepersubclass
 	
+
+** In my view (NOT A RULE)
+	+ If we do not require polymorphic association or query, using Table Per Concrete Class
+	+ If We require polymorphic association and query, and subclasses declare few properties (differ mainly in behaviour), using Table Per Hierarchy
+	+ If We require polymorphic association and query, and subclasses delare many properties (differ mainly in data), using table per subclass
