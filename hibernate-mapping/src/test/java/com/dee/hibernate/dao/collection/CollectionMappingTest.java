@@ -26,10 +26,18 @@ public class CollectionMappingTest extends TestCase {
         image.getSupportedExts().add("gif");
         image.getTypes().add(new ImageType("avatar", "AV"));
         image.getTypes().add(new ImageType("profile", "PRF"));
+        image.getLocations().add("server1");
+        image.getLocations().add("server2");
+        image.getSizes().put("jpg", 123);
+        image.getSizes().put("png", 234);
+        image.getSizes().put("gif", 92);
         
         ImageModel image1 = new ImageModel();
         image1.setUrl("/image/ava1");
         image1.getTypes().add(new ImageType("avatar"));
+        image1.getLocations().add("server2");
+        image1.getLocations().add("server3");
+        image1.getSizes().put("gif", 92);
         
         Session session = SessionUtil.getSession();
         session.getTransaction().begin();

@@ -1,6 +1,10 @@
 package com.dee.hibernate.model.collection;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.CollectionTable;
@@ -12,6 +16,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.MapKeyColumn;
+import javax.persistence.OrderColumn;
+
+import org.hibernate.annotations.IndexColumn;
 
 /**
  * @author dien.nguyen
@@ -34,6 +42,18 @@ public class ImageModel {
     @CollectionTable(name = "image_ext",  joinColumns = {@JoinColumn(name = "image_id")})
     @Column(name = "ext")
     private Set<String> supportedExts = new HashSet<String>();
+    
+    @ElementCollection
+    @CollectionTable(name = "image_loc",  joinColumns = {@JoinColumn(name = "image_id")})
+    @Column(name = "location")
+    @OrderColumn(name = "position")
+    private List<String> locations = new ArrayList<String>();
+    
+    @ElementCollection
+    @CollectionTable(name = "image_size",  joinColumns = {@JoinColumn(name = "image_id")})
+    @Column(name = "size")
+    @MapKeyColumn(name = "file_type")
+    private Map<String, Integer> sizes = new HashMap<String, Integer>();
 
     public Long getId() {
         return id;
@@ -65,6 +85,22 @@ public class ImageModel {
 
     public void setTypes(Set<ImageType> types) {
         this.types = types;
+    }
+
+    public List<String> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(List<String> locations) {
+        this.locations = locations;
+    }
+
+    public Map<String, Integer> getSizes() {
+        return sizes;
+    }
+
+    public void setSizes(Map<String, Integer> sizes) {
+        this.sizes = sizes;
     }
     
 }
