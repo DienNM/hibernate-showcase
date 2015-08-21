@@ -32,6 +32,7 @@ public class ExampleRunner {
         createCategories();
     }
     
+    @SuppressWarnings("deprecation")
     private void createUser() {
         UserModel user = new UserModel();
         user.setEmail("nmdien61@gmail.com");
