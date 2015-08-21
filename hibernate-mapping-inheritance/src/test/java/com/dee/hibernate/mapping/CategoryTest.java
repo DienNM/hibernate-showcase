@@ -1,12 +1,8 @@
 package com.dee.hibernate.mapping;
 
-import org.hibernate.Session;
-import org.junit.Assert;
-
-import com.dee.hibernate.mapping.tablepersubclass.CustomerModel;
-import com.dee.hibernate.mapping.tablepersubclass.EmployeeModel;
-
 import junit.framework.TestCase;
+
+import org.hibernate.Session;
 
 /**
  * @author dien.nguyen

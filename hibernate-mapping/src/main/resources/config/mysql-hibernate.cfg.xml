@@ -27,7 +27,7 @@
 		<!-- <mapping resource="mapping/hibernate.hbm.xml" /> -->
 		
 		<!-- One2One -->
-		<mapping class="com.dee.hibernate.model.one2one.case01.UserModel"/>
+		<!-- <mapping class="com.dee.hibernate.model.one2one.case01.UserModel"/>
         <mapping class="com.dee.hibernate.model.one2one.case01.UserInfoModel"/>
         
         <mapping class="com.dee.hibernate.model.one2one.case02.UserModel"/>
@@ -36,12 +36,16 @@
         <mapping class="com.dee.hibernate.model.one2one.case03.UserModel"/>
         <mapping class="com.dee.hibernate.model.one2one.case03.UserInfoModel"/>
         
-        <!-- Many 2 One -->
+        Many 2 One
         <mapping class="com.dee.hibernate.model.one2many.case01.CustomerModel"/>
         <mapping class="com.dee.hibernate.model.one2many.case01.AddressModel"/>
         
         <mapping class="com.dee.hibernate.model.one2many.case02.CustomerModel"/>
         <mapping class="com.dee.hibernate.model.one2many.case02.AddressModel"/>
+         -->
+        
+        <mapping class="com.dee.hibernate.model.collection.ImageModel"/>
+        
         
 	</session-factory>
 </hibernate-configuration>
