@@ -14,6 +14,9 @@
         <class>com.dee.hibernate.jpa.compositeid.OrderDetailCase01Model</class>
         <class>com.dee.hibernate.jpa.compositeid.OrderDetailCase02Model</class>
         <class>com.dee.hibernate.jpa.compositeid.OrderDetailCase03Model</class>
+        
+        <class>com.dee.hibernate.jpa.componentmapping.OrderCase01Model</class>
+        <class>com.dee.hibernate.jpa.componentmapping.OrderCase02Model</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
