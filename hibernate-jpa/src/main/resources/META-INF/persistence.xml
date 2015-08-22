@@ -17,6 +17,14 @@
         
         <class>com.dee.hibernate.jpa.componentmapping.OrderCase01Model</class>
         <class>com.dee.hibernate.jpa.componentmapping.OrderCase02Model</class>
+        
+        
+        <class>com.dee.hibernate.jpa.componentmapping.collection.UserCase01Model</class>
+        <class>com.dee.hibernate.jpa.componentmapping.collection.PhoneCase01Model</class>
+        
+        <class>com.dee.hibernate.jpa.componentmapping.collection.UserCase02Model</class>
+        <class>com.dee.hibernate.jpa.componentmapping.collection.PhoneCase02Model</class>
+        
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
